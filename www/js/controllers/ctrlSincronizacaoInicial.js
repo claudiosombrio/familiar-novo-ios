@@ -1813,6 +1813,7 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
                     $scope.log.unshift('Importação por meio de arquivo');
                     DB.session.transaction(function(tx) {
                         FS.fileSystem.root.getFile("celk/familias/tabelaTemp.txt", null, function(fileEntry) {
+                            $scope.log.unshift('Arquivo carregado');
                             fileEntry.file(function(file) {
                                 $scope.log.unshift('Arquivo lido');
                                 var lr = new LineReader({
