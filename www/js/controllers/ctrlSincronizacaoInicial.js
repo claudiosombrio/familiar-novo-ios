@@ -1814,6 +1814,7 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
                     DB.session.transaction(function(tx) {
                         FS.fileSystem.root.getFile("celk/familias/tabelaTemp.txt", null, function(fileEntry) {
                             fileEntry.file(function(file) {
+                                $scope.log.unshift('Arquivo lido');
                                 var lr = new LineReader({
                                     chunkSize: 600
                                 });
