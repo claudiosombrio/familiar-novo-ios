@@ -1811,8 +1811,8 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
                 $scope.baixarArquivo(versao, 'dominio_paciente', $scope.bind.dominioPaciente).then(function() {
                     $scope.log.unshift('Importando DominioPaciente(s)');
                     $scope.log.unshift('Importação por meio de arquivo');
-                    DB.session.transaction(function(tx) {
-                        $scope.log.unshift('transacao criada');
+//                    DB.session.transaction(function(tx) {
+//                        $scope.log.unshift('transacao criada');
                         FS.fileSystem.root.getFile("celk/familias/tabelaTemp.txt", null, function(fileEntry) {
                             $scope.log.unshift('Arquivo carregado');
                             fileEntry.file(function(file) {
@@ -1867,9 +1867,9 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
                             }, $scope.failFile);
                         }, $scope.failFile);
 
-                    }, function(error) {
-                        $scope.problemaImportarArquivo(error);
-                    });
+//                    }, function(error) {
+//                        $scope.problemaImportarArquivo(error);
+//                    });
                 });
             });
         };
