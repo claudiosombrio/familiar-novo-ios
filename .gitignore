@@ -5,3 +5,4 @@ plugins/
 www/chcp.json  
 www/chcp.manifest
 cordova-hcp.json
+/node_modules/
