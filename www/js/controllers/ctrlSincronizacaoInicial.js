@@ -88,9 +88,11 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
             var downloadPath = "cdvfile://localhost/persistent/celk/familias/tabelaTemp.txt";
 
             ft.download(uri, downloadPath, function(entry) {
+                    $scope.log.unshift('arquivo baixado com sucesso!');
                     deferred.resolve();
                 },
                 function(error) {
+                    $scope.log.unshift('erro ao baixar arquivo!');
                     deferred.reject(error);
                 });
 
