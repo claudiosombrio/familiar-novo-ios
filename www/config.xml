@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="br.com.celk.familias" version="4">
-  <name>Famílias</name>
+  <name>Familias-ios</name>
   <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
