@@ -1812,6 +1812,7 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
                     $scope.log.unshift('Importando DominioPaciente(s)');
                     $scope.log.unshift('Importação por meio de arquivo');
                     DB.session.transaction(function(tx) {
+                        $scope.log.unshift('transacao criada');
                         FS.fileSystem.root.getFile("celk/familias/tabelaTemp.txt", null, function(fileEntry) {
                             $scope.log.unshift('Arquivo carregado');
                             fileEntry.file(function(file) {
