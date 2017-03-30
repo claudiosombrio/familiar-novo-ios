@@ -1816,7 +1816,7 @@ controllers.controller('sincronizacaoInicialCtrl', ['$q', '$scope', '$state', '$
                             fileEntry.file(function(file) {
                                 $scope.log.unshift('Arquivo lido');
                                 var lr = new LineReader({
-                                    chunkSize: 600
+                                    chunkSize: 200
                                 });
                                 var totalCount = 0;
                                 var lineGroup = '';
