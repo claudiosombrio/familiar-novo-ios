@@ -1,0 +1,8 @@
+{
+  "name": "Familias",
+  "version": "5",
+  "description": "",
+  "cordovaPlatforms": [
+    "android"
+  ]
+}
